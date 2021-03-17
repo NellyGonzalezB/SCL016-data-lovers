@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>POKEMON GO EXPLORER</title>
-    <link rel="stylesheet" href="style.css" />
-    <!--Link para tipografía "B612 Mono"-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul id="menu" class="menu">
-          <li>Pokemon Go</li>
-          <li>News & Events</li>
-          <li>Animation</li>
-          <li>Video Games</li>
-          <li>Log In</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>POKEMON GO EXPLORER</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!--Link para tipografía "B612 Mono"-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul id="menu" class="menu">
+        <li><a href="https://pokemongolive.com/es/play-where-you-are/">Pokemon Go</a></li>
+        <li><a href="https://pokemongolive.com/es/events/">News & Events</a></li>
+        <li><a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q">Animation</a></li>
+        <li><a href="https://pokemongolive.com/es/">Video Games</a></li>
+        <li><a>Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
     <!--Página de bienvenida-->
-      <section class="welcome" id="welcome"> 
-        <img src="images/logo.png" width="320" height="320" class="principal-logo">
-        <h1>BIENVENIDO ENTRENADOR POKEMON</h1>
-        <h2>Aquí encontrarás toda la información de las FAMILIAS EVOLUTIVAS de los POKEMON en las Regiones de KANTO y JOHTO.</h2>
-        <h1 class="go">¡VAMOS!</h1>
-          <button id="pokeball">
-            <img src="images/pokebola.png" width="130" height="130">
-          </button>
-      </section>
+    <section class="welcome" id="welcome">
+      <img src="images/logo.png" width="320" height="320" class="principal-logo">
+      <h1>BIENVENIDO ENTRENADOR POKEMON</h1>
+      <h2>Aquí encontrarás toda la información de las FAMILIAS EVOLUTIVAS de los POKEMON en las Regiones de KANTO y
+        JOHTO.</h2>
+      <h1 class="go">¡VAMOS!</h1>
+      <button onclick="button();" id="pokeball" class="pokeball">
+        <img src="images/pokebola.png" width="130" height="130">
+      </button>
+    </section>
+
     <!--Página de selección de mapa-->
-      <section>
-        <img src="images/logo.png" width="250" height="250" class="secundar-logo">
-        <h2>¿QUÉ REGIÓN TE GUSTARÍA EXPLORAR?</h2>
-      </section>
-    </main>
-    <footer>
-      <nav>
-        <img src="images/Facebook_icon_2013.svg.png" width="32" height="32" class="facebook">
-        <img src="images/640px-YouTube_icon.png" width="45" height="32" class="youtube">
-        <img src="images/twitter.png" width="32" height="32" class="twitter">
-        <p>© 2021 Laboratoria</p>
-      </nav>
-    </footer>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <section class="second-page">
+      <img src="images/logo.png" width="250" height="250" class="secundar-logo">
+      <h2>¿QUÉ REGIÓN TE GUSTARÍA EXPLORAR?</h2>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <img src="images/Facebook_icon_2013.svg.png" width="32" height="32" class="facebook">
+      <img src="images/640px-YouTube_icon.png" width="45" height="32" class="youtube">
+      <img src="images/twitter.png" width="32" height="32" class="twitter">
+      <p>© 2021 Laboratoria</p>
+    </nav>
+  </footer>
+  <div id="root"></div>
+  
+</body>
+<script src="main.js" type="module"></script>
 </html>
