@@ -5,10 +5,21 @@
 
 //console.log(example, data);
 
-const button = () => {
-    document.querySelector('.welcome').style.display = "none";
-    document.querySelector('.second-page').style.display = "block";
-  }
+const firstButton = () => {
+  document.querySelector('.first-page').style.display = "none";
+  document.querySelector('.second-page').style.display = "block";
+}
 
+const kantoRegion = () => {
+  document.querySelector('.second-page').style.display = "none";
+  document.querySelector('.kanto-location').style.display = "block";
+}
 
-  document.querySelector(".pokeball").addEventListener("click", button);
+const johtoRegion = () => {
+  document.querySelector('.second-page').style.display = "none";
+  document.querySelector('.johto-location').style.display = "block";
+}
+
+document.querySelector(".poke-button").addEventListener("click", firstButton);
+document.querySelector(".kanto-page").addEventListener("click", kantoRegion);
+document.querySelector(".johto-page").addEventListener("click", johtoRegion);

@@ -1,30 +1,134 @@
+.first-page {
+    background-image: url("https://i.ibb.co/w4SbkWq/txJ7lD.jpg");
+    background-size: 100% 100%;
+}
+
+.logo-container {
+    justify-content: auto;
+    text-align: center;
+}
+
+.macro-container {
+    display: flex;
+}
+
+.text-container {
+    color: white;
+    font-size: 25px;
+    background-color: #04C200;
+    border-radius: 14px;
+    border-width: 20px;
+    width: 80%;
+    text-align: center;
+    opacity: 0.8;
+    height: 500px;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.boy {
+    height: 850px;
+}
+
+.girl {
+    height: 850px;
+}
+
+.poke-logo {
+    width: 350px;
+    height: 350px;
+}
+
+.pokeball {
+    width: 50px;
+    height: 50px;
+}
+
+.second-logo {
+    justify-content: auto;
+    text-align: center;
+}
+
+.kanto {
+    border-radius: 14px;
+    border-color: #FFCB05;
+    border-style: solid;
+    border-width: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+.johto {
+    border-radius: 14px;
+    border-color: #FFCB05;
+    border-style: solid;
+    border-width: 20px;
+    width: 500px;
+    height: 500px;
+}
+
 .second-page {
     display: none;
 }
 
+.sec-tittle {
+    color: #FFCB05;
+    font-size: 45px;
+    text-align: center;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.pikachu {
+    justify-content: auto;
+    height: 350px;
+
+}
+
 ul {
-    list-style-type: none; 
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: #333;
-    left: 0px;
+    display: flex;
+    list-style: none;
 }
 
 li {
-    display: inline;
-
-}
-
-li a {
-    color: white;
+    width: 100%;
+    font-size: 45px;
     text-align: center;
+    border-radius: 14px;
+    border-color: #FFCB05;
+    border-style: solid;
+    border-width: 20px;
     padding: 14px;
     text-decoration: none;
+    display: inline;
+    justify-content: space-between;
 }
 
-li:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+.kanto-location {
+    display: none;
+}
+
+.johto-location {
+    display: none;
+}
+
+.kanto-region {
+    background-color: #FFCB05;
+    border-style: solid;
+    border-radius: 14px;
+    width: 450px;
+    text-align: center;
+}
+
+.johto-region {
+    background-color: #FFCB05;
+    border-style: solid;
+    border-radius: 14px;
+    width: 450px;
+    text-align: center;
 }

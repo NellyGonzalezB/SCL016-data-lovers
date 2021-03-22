@@ -1,59 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>POKEMON GO EXPLORER</title>
-  <link rel="stylesheet" href="style.css"/>
-  <!--Link para tipografía "B612 Mono"-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeSearch</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul id="menu" class="menu">
-        <li><a href="https://pokemongolive.com/es/play-where-you-are/">Pokemon Go</a></li>
-        <li><a href="https://pokemongolive.com/es/events/">News & Events</a></li>
-        <li><a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q">Animation</a></li>
-        <li><a href="https://pokemongolive.com/es/">Video Games</a></li>
-        <li><a>Log In</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+    <div class="first-page">
+        <div class="logo-container">
+            <img src="https://i.ibb.co/h1Sr2xV/POKESEARCH-BORDE.png" alt="" class="poke-logo">
+        </div>
+        <div class="macro-container">
+            <img src="https://i.ibb.co/86fHsk3/GO-Spark.png" alt="" class="boy">
+            <div class="text-container">
+                <h1>Welcome Pokemon Master!</h1>
+                <p>Here you will find all the information about the pokemon that inhabit the Kanto and Johto Regions.
+                </p>
+                <h2>Go!</h2>
+                <button onclick="firstButton();" id="poke-button" class="poke-button">
+                    <img class="pokeball" src="https://i.ibb.co/yV60Xvw/pokebola.png" alt="">
+                </button>
+            </div>
+            <img src="https://i.ibb.co/8dTpbr3/pokemon-go-female-trainer-by-cssobral2013-ddto4kf-fullview.png" alt=""
+                class="girl">
+        </div>
+    </div>
 
-    <!--Página de bienvenida-->
-    <section class="welcome" id="welcome">
-      <img src="images/logo.png" width="320" height="320" class="principal-logo">
-      <h1>BIENVENIDO ENTRENADOR POKEMON</h1>
-      <h2>Aquí encontrarás toda la información de las FAMILIAS EVOLUTIVAS de los POKEMON en las Regiones de KANTO y
-        JOHTO.</h2>
-      <h1 class="go">¡VAMOS!</h1>
-      <button onclick="button();" id="pokeball" class="pokeball">
-        <img src="images/pokebola.png" width="130" height="130">
-      </button>
-    </section>
+    <!-- Second Page -->
 
-    <!--Página de selección de mapa-->
-    <section class="second-page">
-      <img src="images/logo.png" width="250" height="250" class="secundar-logo">
-      <h2>¿QUÉ REGIÓN TE GUSTARÍA EXPLORAR?</h2>
-    </section>
-  </main>
-  <footer>
-    <nav>
-      <img src="images/Facebook_icon_2013.svg.png" width="32" height="32" class="facebook">
-      <img src="images/640px-YouTube_icon.png" width="45" height="32" class="youtube">
-      <img src="images/twitter.png" width="32" height="32" class="twitter">
-      <p>© 2021 Laboratoria</p>
-    </nav>
-  </footer>
-  <div id="root"></div>
-  
+    <div class="second-page">
+        <div class="second-logo">
+            <img src="https://i.ibb.co/h1Sr2xV/POKESEARCH-BORDE.png" alt="" class="poke-logo">
+        </div>
+        <h1 class="sec-tittle">WHICH REGION WOULD YOU LIKE TO EXPLORE?</h1>
+        <div class="images-container">
+            <img class="kanto" src="https://i.ibb.co/3zsZKcN/Mapa-Kanto-Pok-mon-Let-s-Go.png" alt="">
+            <img src="https://i.ibb.co/yYDLGZt/pokemon-PNG33.png" alt="" class="pikachu">
+            <img class="johto" src="https://i.ibb.co/w0TFDbq/Johto-HGSS.png" alt="">
+        </div>
+        <div>
+            <ul>
+                <li><a class="kanto-page" href="#kanto-location">Kanto</a></li>
+                <li><a class="johto-page" href="#johto-location">Johto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kanto Page-->
+    <div class="kanto-location" id="kanto-location">
+        <img src="https://i.ibb.co/h1Sr2xV/POKESEARCH-BORDE.png" alt="" class="poke-logo">
+        <h1 class="kanto-region">Kanto Region</h1>
+    </div>
+
+    <!-- Johto Page-->
+    <div class="johto-location" id="johto-location">
+        <img src="https://i.ibb.co/h1Sr2xV/POKESEARCH-BORDE.png" alt="" class="poke-logo">
+        <h1 class="johto-region">Johto Region</h1>
+        <div class="container-poke-johto">
+            <ul class="johto-results">
+                <li class="poke-image">
+                    <figure>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/152.png" alt="">
+                    </figure>
+                </li>
+                <li class="poke-image">
+                    <figure>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/153.png" alt="">
+                    </figure>
+                </li>
+                <li class="poke-image">
+                    <figure>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/154.png" alt="">
+                    </figure>
+                </li>
+                <li class="poke-image">
+                    <figure>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/155.png" alt="">
+                    </figure>
+                </li>
+                <li class="poke-image">
+                    <figure>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/156.png" alt="">
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
-<script src="main.js" type="module"></script>
+<script type="text/javascript" src="poke.js"></script>
+
 </html>
