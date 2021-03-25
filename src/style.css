@@ -70,6 +70,7 @@
 
 .second-page {
     display: none;
+    background: linear-gradient(to bottom,#DA099F,#721B9B,#1F62B0);
 }
 
 .sec-tittle {
@@ -111,10 +112,12 @@ li {
 
 .kanto-location {
     display: none;
+    background: linear-gradient(to bottom,#DA099F,#721B9B,#1F62B0);
 }
 
 .johto-location {
     display: none;
+    background: linear-gradient(to bottom,#DA099F,#721B9B,#1F62B0);
 }
 
 .kanto-region {
@@ -123,6 +126,11 @@ li {
     border-radius: 14px;
     width: 450px;
     text-align: center;
+}
+
+li {
+    display: inline;
+    order: 4;
 }
 
 .johto-region {
