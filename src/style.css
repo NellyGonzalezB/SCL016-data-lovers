@@ -21,7 +21,7 @@
     width: 80%;
     text-align: center;
     opacity: 0.8;
-    height: 500px;
+    height: 600px;
     align-items: center;
     justify-content: flex-end;
     font-family: b612 mono;
@@ -51,6 +51,11 @@ p {
 .second-logo {
     justify-content: auto;
     text-align: center;
+}
+
+.pokeball {
+    height: 150px;
+    width: 150px;
 }
 
 .kanto-link, .johto-link {
@@ -120,7 +125,11 @@ ul {
 }
 
 .pokemon-image:hover {
-    -webkit-transform:scale(0.2);transform:scale(1.7);
+    -webkit-transform:scale(0.1);transform:scale(1.5);
+    cursor: pointer;
+    box-shadow: 1px 1px 23px 2px rgb(37, 1, 46);
+    opacity: 2.1;
+    border-radius: 100%;
 }
 
 .poke-image-k, .poke-image-j {
