@@ -2,7 +2,7 @@
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-
+//import card from './card.js';
 
 const firstButton = () => {
     document.querySelector('.first-page').style.display = "none";
@@ -11,9 +11,9 @@ const firstButton = () => {
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
-    console.log(pokemon);
+        console.log(pokemon);
     const containerK = document.querySelector(".kanto-results");
-    const pokeMap = pokemon.map((data) => {
+    pokemon.map((data) => {
         containerK.innerHTML += `
         <li class="poke-image" id=${data.name}>
             <figure>
@@ -42,7 +42,7 @@ const johtoRegion = () => {
     console.log(pokemonJohto);
 
     const containerJ = document.querySelector(".johto-results");
-    const pokeMapJ = pokemonJohto.map((data) => {
+    pokemonJohto.map((data) => {
         containerJ.innerHTML += `
         <li class="poke-image">
             <figure>
