@@ -21,7 +21,7 @@ const kantoRegion = () => {
                 <div class="pokemon-name">${data.name}</div>
              </figure>
         </li>
-`
+        `
     })
 
     document.querySelector('.second-page').style.display = "none";
@@ -30,7 +30,10 @@ const kantoRegion = () => {
         element.addEventListener("click", (event) =>{
             const pokeCard = event.currentTarget.id; 
             console.log(pokeCard);
-
+            const pokeInfo = data.pokemon.filter(info => info.name == pokeCard);
+            console.log(pokeInfo);
+            document.querySelector(".kanto-location").style.display = "none";
+            document.querySelector(".information-card").style.display = "block";
         })
            
     })
@@ -44,21 +47,27 @@ const johtoRegion = () => {
     const containerJ = document.querySelector(".johto-results");
     pokemonJohto.map((data) => {
         containerJ.innerHTML += `
-        <li class="poke-image">
+        <li class="poke-image" id=${data.name}>
             <figure>
                 <img class="pokemon-image" src=${data.img}>
                 <div class="pokemon-name">${data.name}</div>
              </figure>
         </li>
-`
+        `
     })
 
     document.querySelector('.second-page').style.display = "none";
     document.querySelector('.johto-location').style.display = "block";
-    
-    
-        
+    document.querySelectorAll(".poke-image").forEach((element) =>{
+        element.addEventListener("click", (event) =>{
+            const pokeCardJ = event.currentTarget.id; 
+            console.log(pokeCardJ);
+            document.querySelector(".johto-location").style.display = "none";
+            document.querySelector(".information-card").style.display = "block";
+        })
+    })
 }
+
 
 /*const pokeCard = () = {
     const about = data.pokemon.filter (data => data.about);
