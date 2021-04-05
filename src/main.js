@@ -32,6 +32,43 @@ const kantoRegion = () => {
             console.log(pokeCard);
             const pokeInfo = data.pokemon.filter(info => info.name == pokeCard);
             console.log(pokeInfo);
+            const kCard = document.querySelector(".page-container");
+            pokeInfo.map((data) => {
+                kCard.innerHTML += `
+                <div class="card-container">
+                <div class="img-container">
+                    <h1 class="poke-number">N°${data.num}</h1>
+                    <div class="circle" id="circle">
+                        <img class="card-image" src=${data.img} alt="">
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="poke-description">
+                        <h1 class="card-name">${data.name}</h1>
+                        <p class="about">${data.about}</p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3 class="pokemon-height">Height</h3>
+                            </td>
+                            <td>
+                                <h3 class="pokemon-weight">Weight</h3>
+                            </td>
+                            <td>
+                                <h3 class="pokemon-type">Type</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="height">${data.size.height}</td>
+                            <td class="weight">${data.size.weight}</td>
+                            <td class="type-icon">${data.type}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                `
+            })
             document.querySelector(".kanto-location").style.display = "none";
             document.querySelector(".information-card").style.display = "block";
         })
@@ -62,11 +99,57 @@ const johtoRegion = () => {
         element.addEventListener("click", (event) =>{
             const pokeCardJ = event.currentTarget.id; 
             console.log(pokeCardJ);
+            const pokeInfoJ = data.pokemon.filter(info => info.name == pokeCardJ);
+            console.log(pokeInfoJ);
+            const jCard = document.querySelector(".page-container");
+            pokeInfoJ.map((data) => {
+                jCard.innerHTML += `
+                <div class="card-container">
+                <div class="img-container">
+                    <h1 class="poke-number">N°${data.num}</h1>
+                    <div class="circle" id="circle">
+                        <img class="card-image" src=${data.img} alt="">
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="poke-description">
+                        <h1 class="card-name">${data.name}</h1>
+                        <p class="about">${data.about}</p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3 class="pokemon-height">Height</h3>
+                            </td>
+                            <td>
+                                <h3 class="pokemon-weight">Weight</h3>
+                            </td>
+                            <td>
+                                <h3 class="pokemon-type">Type</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="height">${data.size.height}</td>
+                            <td class="weight">${data.size.weight}</td>
+                            <td class="type-icon">${data.type}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                `
+            })
             document.querySelector(".johto-location").style.display = "none";
             document.querySelector(".information-card").style.display = "block";
         })
     })
 }
+
+
+document.querySelector(".poke-button").addEventListener("click", firstButton);
+document.querySelector(".kanto-page").addEventListener("click", kantoRegion);
+document.querySelector(".johto-page").addEventListener("click", johtoRegion);
+
+
 
 
 /*const pokeCard = () = {
@@ -96,17 +179,13 @@ const pokeCard = () => {
 }
 */ 
 
-const clickCard = (event) => {
+/*const clickCard = (event) => {
     const pokeCard = event.currentTarget.name; 
     console.log(pokeCard); 
 
     //document.querySelector(".poke-image").style.display = "none";
    // document.querySelector(".information-card").style.display = "block";
-}
+}*/
 
-
-document.querySelector(".poke-button").addEventListener("click", firstButton);
-document.querySelector(".kanto-page").addEventListener("click", kantoRegion);
-document.querySelector(".johto-page").addEventListener("click", johtoRegion);
 
 //.addEventListener("click", pokeCard);
