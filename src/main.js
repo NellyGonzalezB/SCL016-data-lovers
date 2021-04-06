@@ -4,10 +4,17 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 //import card from './card.js';
 
+
 const firstButton = () => {
     document.querySelector('.first-page').style.display = "none";
     document.querySelector('.second-page').style.display = "block";
 }
+
+const menu = () => {
+    document.querySelector('.first-page').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -63,11 +70,15 @@ const kantoRegion = () => {
                             <td class="height">${data.size.height}</td>
                             <td class="weight">${data.size.weight}</td>
                             <td class="type-icon">${data.type}</td>
+                                 ${data.type} === "grass") {
+                                     <img class="type-image" src="images/GLASS.png">
+                                }
                         </tr>
                     </table>
                 </div>
             </div>
                 `
+           
             })
             document.querySelector(".kanto-location").style.display = "none";
             document.querySelector(".information-card").style.display = "block";
@@ -142,12 +153,16 @@ const johtoRegion = () => {
             document.querySelector(".information-card").style.display = "block";
         })
     })
+
 }
 
 
+
 document.querySelector(".poke-button").addEventListener("click", firstButton);
-document.querySelector(".kanto-page").addEventListener("click", kantoRegion);
-document.querySelector(".johto-page").addEventListener("click", johtoRegion);
+document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
+document.querySelector(".johto-link").addEventListener("click", johtoRegion);
+document.querySelector(".home").addEventListener("click", menu);
+
 
 
 
