@@ -10,6 +10,11 @@ const firstButton = () => {
     document.querySelector(".second-page").style.display = "block";
 }
 
+const menu = () => {
+    document.querySelector('.first-page').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -65,9 +70,7 @@ const kantoRegion = () => {
                             <td class="height">${data.size.height}</td>
                             <td class="weight">${data.size.weight}</td>
                             <td class="type-icon">${data.type}</td>
-                                  if (${data.type} === "grass") {
-                                     <img class="type-photo" src="images/GLASS.png">
-                                }
+                          
                         </tr>
                     </table>
                 </div>
@@ -185,6 +188,35 @@ const poketype = pokeData.filter(pokeData => pokeData.type.includes ("poison"));
 console.log(poketype);
 
 const pokebug = pokeData.filter(pokeData => pokeData.type.includes ("bug"));
+document.querySelector(".poke-button").addEventListener("click", firstButton);
+document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
+document.querySelector(".johto-link").addEventListener("click", johtoRegion);
+document.querySelector(".home").addEventListener("click", menu);
+
+
+
+
+
+/*const pokeCard = () = {
+    const about = data.pokemon.filter (data => data.about);
+    const height = data.pokemon.filter (data => data.size.height);
+    const weight = data.pokemon.filter (data => data.size.weight); 
+    const type = data.pokemon.filter (data => data.type);
+    const evolution = data.pokemon.filter (data => data.evolution.name);
+
+const card = document.querySelector(".values");
+    const pokeInfoK = pokeCard.map((data) => {
+        values.InnerHTML += `
+        <div class="values">
+          <tr>
+            <td class="height">${data.size.height}</td>
+            <td class="weight">${data.size.weight}</td>
+             <td class="type-icon">${data.type}</td>
+          </tr>   
+        </div>    
+    `
+    })
+
 
 
 const pokedragon = pokeData.filter(pokeData => pokeData.type.includes ("dragon"));
