@@ -15,6 +15,19 @@ const menu = () => {
     document.querySelector('.second-page').style.display = "none";
 }
 
+const regions = () => {
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuKanto = () => {
+    document.querySelector('.kanto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuJohto = () => {
+    document.querySelector('.johto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -154,33 +167,9 @@ const johtoRegion = () => {
 
 }
 
-/* Funciones menú desplegable
-const menu = () => {
-    document.querySelector(".first-page").style.display = "block";
-    document.querySelector(".second-page").style.display = "none";
-}
-
-const regions = () => {
-    document.querySelector(".second-page").style.display = "none";
-}
-
-const menuKanto = () => {
-    document.querySelector(".kanto-location", ".pokek").style.display = "block";
-    document.querySelector(".second-page").style.display = "none";
-}
-
-const menuJohto = () => {
-    document.querySelector(".johto-location").style.display = "block";
-    document.querySelector(".second-page").style.display = "none";
-}
-
-document.querySelector(".home").addEventListener("click", menu);
-document.querySelector(".region").addEventListener("click", regions);
-document.querySelector(".kanto-menu").addEventListener("click", menuKanto);
-document.querySelector(".johto-menu").addEventListener("click", menuJohto);
-*/
-
-
+const pokeData = data.pokemon;
+const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
+console.log(poketype);
 
 /*
 const pokeData = data.pokemon;
@@ -192,6 +181,9 @@ document.querySelector(".poke-button").addEventListener("click", firstButton);
 document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
 document.querySelector(".johto-link").addEventListener("click", johtoRegion);
 document.querySelector(".home").addEventListener("click", menu);
+document.querySelector(".region").addEventListener("click", regions);
+document.querySelector(".kanto-menu").addEventListener("click", menuKanto);
+document.querySelector(".johto-menu").addEventListener("click", menuJohto);
 
 
 
