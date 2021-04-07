@@ -4,9 +4,29 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 //import card from './card.js';
 
+
 const firstButton = () => {
     document.querySelector('.first-page').style.display = "none";
     document.querySelector('.second-page').style.display = "block";
+}
+
+const menu = () => {
+    document.querySelector('.first-page').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const regions = () => {
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuKanto = () => {
+    document.querySelector('.kanto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuJohto = () => {
+    document.querySelector('.johto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
 }
 
 const kantoRegion = () => {
@@ -63,11 +83,15 @@ const kantoRegion = () => {
                             <td class="height">${data.size.height}</td>
                             <td class="weight">${data.size.weight}</td>
                             <td class="type-icon">${data.type}</td>
+                                  if (${data.type} === "grass") {
+                                     <img class="type-photo" src="images/GLASS.png">
+                                }
                         </tr>
                     </table>
                 </div>
             </div>
                 `
+           
             })
             document.querySelector(".kanto-location").style.display = "none";
             document.querySelector(".information-card").style.display = "block";
@@ -142,7 +166,12 @@ const johtoRegion = () => {
             document.querySelector(".information-card").style.display = "block";
         })
     })
+
 }
+
+const pokeData = data.pokemon;
+const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
+console.log(poketype);
 
 
 /*
