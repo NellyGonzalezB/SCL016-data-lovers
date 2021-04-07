@@ -3,7 +3,7 @@ a {
 }
 
 a:visited {
-    color: #484040 !important; 
+    color: #484040 !important;
 }
 
 body {
@@ -149,7 +149,7 @@ p {
 .images-container {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .pikachu {
@@ -200,7 +200,7 @@ li:hover {
     -webkit-transform:scale(0.1);transform:scale(1.1);
     cursor: pointer;
     box-shadow: 1px 1px 23px 2px rgb(37, 1, 46);
-    opacity: 2.1;    
+    opacity: 2.1;
 }
 
 
@@ -273,20 +273,20 @@ li:hover {
     text-align: center;
     line-height:170%;
   }
-  
+
   .card-image {
     width: 350px;
     height: 402px;
     display: flex;
   }
-  
+
   .information-card {
     display: inline-block;
     background: linear-gradient(to bottom,#DA099F,#721B9B,#1F62B0);
     background-size: 100% 100%;
     align-items: stretch;
   }
-  
+
   .card-container {
     display: flex;
     align-items: center;
@@ -295,7 +295,7 @@ li:hover {
     width: 100%;
     justify-content: space-around;
   }
-  
+
   .img-container {
     display: flex;
     flex-direction: column;
@@ -303,7 +303,7 @@ li:hover {
     width: 35%;
     height: 10%;
   }
-  
+
   .circle {
     width: 402px;
     height: 402px;
@@ -313,7 +313,7 @@ li:hover {
     flex-direction: column;
     justify-content: flex-start;
   }
-  
+
   .info-container {
     display: flex;
     flex-direction: column;
@@ -323,7 +323,7 @@ li:hover {
     background-color: #484040;
     width: 50%;
   }
-  
+
   .poke-description {
     display: flex;
     justify-content: center;
@@ -331,7 +331,7 @@ li:hover {
     border-color: #FFCB05;
     flex-wrap: wrap;
   }
-  
+
   .card-name {
     color: #484040;
     background-color: #FFCB05;
@@ -343,7 +343,7 @@ li:hover {
     text-align: center;
     line-height:170%;
   }
-  
+
   .about {
     font-size: 27px;
     font-family: roboto;
@@ -351,7 +351,7 @@ li:hover {
     text-align: justify;
     padding: 30px;
   }
-  
+
   .pokemon-height, .pokemon-weight, .pokemon-type {
     color: #484040;
     background-color: #FFCB05;
@@ -361,14 +361,14 @@ li:hover {
     text-align: center;
     line-height:170%;
   }
-  
+
   .height, .weight, .type-icon {
     font-family: roboto;
     font-size: 28px;
     color: #FFFFFF;
     text-align: center;
   }
-  
+
 
 .information-card {
     display: none;
@@ -412,7 +412,7 @@ li:hover {
     height: 74px;
     text-align: center;
     line-height:150%;
-    margin: 5% 10% 0 15% ; 
+    margin: 5% 10% 0 15% ;
 }
 
 .card-about{
@@ -439,14 +439,14 @@ li:hover {
     font-family: roboto;
     font-size: 28px;
     color: #FFFFFF;
-    text-align: center;    
+    text-align: center;
 }
-    
+
 .weight{
     font-family: roboto;
     font-size: 28px;
     color: #FFFFFF;
-    text-align: center;    
+    text-align: center;
 }
 
 .card-container{

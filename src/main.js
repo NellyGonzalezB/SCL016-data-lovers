@@ -145,47 +145,60 @@ const johtoRegion = () => {
 }
 
 
+/*
+const pokeData = data.pokemon;
+const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
+console.log(poketype);
+
+
+const pokedragon = pokeData.filter(pokeData => pokeData.type == "dragon");
+console.log(pokedragon);
+
+
+const pokefairy = pokeData.filter(pokeData => pokeData.type == "fairy");
+console.log(pokefairy);
+
+
+const pokefire = pokeData.filter(pokeData => pokeData.type == "fire");
+console.log(pokefire);
+
+
+const pokeghost = pokeData.filter(pokeData => pokeData.type == "ghost");
+console.log(pokeghost);
+
+const pokeground = pokeData.filter(pokeData => pokeData.type == "ground");
+console.log(pokeground);
+
+const pokenormal = pokeData.filter(pokeData => pokeData.type == "normal");
+console.log(pokenormal);
+
+const pokedark = pokeData.filter(pokeData => pokeData.type == "dark");
+console.log(pokedark);
+
+const pokelectric = pokeData.filter(pokeData => pokeData.type == "electric");
+console.log(pokelectric);
+
+const pokefight = pokeData.filter(pokeData => pokeData.type == "fighting");
+console.log(pokefight);
+
+const pokefly = pokeData.filter(pokeData => pokeData.type == "flying");
+console.log(pokefly);
+
+const pokegrass = pokeData.filter(pokeData => pokeData.type == "grass");
+console.log(pokegrass);
+
+const pokeice = pokeData.filter(pokeData => pokeData.type == "ice");
+console.log(pokeice);
+
+const pokerock = pokeData.filter(pokeData => pokeData.type == "rock");
+console.log(pokerock);
+
+const pokewater = pokeData.filter(pokeData => pokeData.type == "water");
+console.log(pokewater);
+
+*/
+
 document.querySelector(".poke-button").addEventListener("click", firstButton);
-document.querySelector(".kanto-page").addEventListener("click", kantoRegion);
-document.querySelector(".johto-page").addEventListener("click", johtoRegion);
+document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
+document.querySelector(".johto-link").addEventListener("click", johtoRegion);
 
-
-
-
-/*const pokeCard = () = {
-    const about = data.pokemon.filter (data => data.about);
-    const height = data.pokemon.filter (data => data.size.height);
-    const weight = data.pokemon.filter (data => data.size.weight); 
-    const type = data.pokemon.filter (data => data.type);
-    const evolution = data.pokemon.filter (data => data.evolution.name);
-
-const card = document.querySelector(".values");
-    const pokeInfoK = pokeCard.map((data) => {
-        values.InnerHTML += `
-        <div class="values">
-          <tr>
-            <td class="height">${data.size.height}</td>
-            <td class="weight">${data.size.weight}</td>
-             <td class="type-icon">${data.type}</td>
-          </tr>   
-        </div>    
-    `
-    })
-
-
-const pokeCard = () => {
-        document.querySelector('.kanto-location').style.display = "none";
-        document.querySelector('.information-card').style.display = "block";    
-}
-*/ 
-
-/*const clickCard = (event) => {
-    const pokeCard = event.currentTarget.name; 
-    console.log(pokeCard); 
-
-    //document.querySelector(".poke-image").style.display = "none";
-   // document.querySelector(".information-card").style.display = "block";
-}*/
-
-
-//.addEventListener("click", pokeCard);
