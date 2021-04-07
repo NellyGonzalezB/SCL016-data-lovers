@@ -141,11 +141,56 @@ p {
     background: linear-gradient(to bottom,#DA099F,#721B9B,#1F62B0);
 }
 
-.sec-tittle {
+.sec-tittle, .third-tittle {
     color: #FFCB05;
     font-size: 45px;
     text-align: center;
     font-family: b612 mono;
+    text-align: center;
+}
+
+.buscador{
+    text-align: center;
+}
+
+.search{
+    font-size: 30px;
+    width: 1058px;
+    height: 92px;
+    border-radius: 30px;
+    font-family: b612 mono;
+    padding: 10px;
+    color: #484040; 
+}
+
+.search-button{
+  text-align: center;
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+
+.types, .a-z, .z-a{
+    background-color: #FFCB05;
+    width: 264px;
+    height: 60px;
+    border-radius: 30px;
+    font-family: b612 mono;
+    font-size: 35px;
+    margin-top: 30px;
+    padding: 10px;
+    color: #484040;
+}
+
+.go-button{
+    width: 139px;
+    height: 92px;
+    background-color: #FFCB05;
+    font-family: b612 mono;
+    color: #484040;
+    font-size: 50px;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
 .images-container {

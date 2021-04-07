@@ -15,6 +15,19 @@ const menu = () => {
     document.querySelector('.second-page').style.display = "none";
 }
 
+const regions = () => {
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuKanto = () => {
+    document.querySelector('.kanto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
+
+const menuJohto = () => {
+    document.querySelector('.johto-location').style.display = "block";
+    document.querySelector('.second-page').style.display = "none";
+}
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -70,8 +83,8 @@ const kantoRegion = () => {
                             <td class="height">${data.size.height}</td>
                             <td class="weight">${data.size.weight}</td>
                             <td class="type-icon">${data.type}</td>
-                                 ${data.type} === "grass") {
-                                     <img class="type-image" src="images/GLASS.png">
+                                  if (${data.type} === "grass") {
+                                     <img class="type-photo" src="images/GLASS.png">
                                 }
                         </tr>
                     </table>
@@ -156,12 +169,18 @@ const johtoRegion = () => {
 
 }
 
+const pokeData = data.pokemon;
+const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
+console.log(poketype);
 
 
 document.querySelector(".poke-button").addEventListener("click", firstButton);
 document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
 document.querySelector(".johto-link").addEventListener("click", johtoRegion);
 document.querySelector(".home").addEventListener("click", menu);
+document.querySelector(".region").addEventListener("click", regions);
+document.querySelector(".kanto-menu").addEventListener("click", menuKanto);
+document.querySelector(".johto-menu").addEventListener("click", menuJohto);
 
 
 
