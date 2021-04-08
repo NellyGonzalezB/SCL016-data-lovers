@@ -165,12 +165,12 @@ p {
 
 .search-button{
   text-align: center;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   
 }
 
-.types, .a-z, .z-a{
+.types, .aOrder, .zOrder{
     background-color: #FFCB05;
     width: 264px;
     height: 60px;
@@ -180,6 +180,39 @@ p {
     margin-top: 30px;
     padding: 10px;
     color: #484040;
+    font-weight: bold;
+}
+
+.fromA, .fromZ{
+    background-color: #FFCB05;
+    width: 340px;
+    height: 60px;
+    border-radius: 30px;
+    font-family: b612 mono;
+    font-size: 25px;
+    margin-top: 30px;
+    padding: 10px;
+    color: #484040;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.orderButtons{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.orderTypes{
+  text-align: center;
+}
+
+.bug, .dragon, .fairy, .fire, .ghost, .ground, .normal, .dark, .electric, .fighting, .flying, .grass, .ice, .poison, .rock, .water{
+  margin: 7px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
 }
 
 .go-button{
@@ -191,6 +224,7 @@ p {
     font-size: 50px;
     border-radius: 30px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .images-container {

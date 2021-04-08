@@ -5,6 +5,20 @@ import data from './data/pokemon/pokemon.js';
 //import card from './card.js';
 
 
+
+
+/*const pokeOrder = data.pokemon;
+const pokeAZ = pokeOrder.filter(pokeOrder => pokeOrder.name);
+pokeAZ.sort((a, b) => {
+    if (a.name<b.name) {
+        return -1;
+        }
+    if (a.name>b.name) {
+//       return 1;
+//    }
+})
+console.log(pokeAZ);
+*/
 const firstButton = () => {
     document.querySelector(".first-page").style.display = "none";
     document.querySelector(".second-page").style.display = "block";
@@ -28,6 +42,19 @@ const menuJohto = () => {
     document.querySelector('.johto-location').style.display = "block";
     document.querySelector('.second-page').style.display = "none";
 }
+
+const pokeOrder = data.pokemon;
+const pokeAZ = pokeOrder.filter(pokeOrder => pokeOrder.name);
+pokeAZ.sort((a, b) => {
+    if (a.name<b.name) {
+        return -1;
+        }
+  
+//const order = document.querySelector(".aOrder");
+     //   order.innerHTML += ("aOrder");
+})
+console.log(pokeAZ);
+
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -142,6 +169,7 @@ const johtoRegion = () => {
                         <tr>
                             <td>
                                 <h3 class="pokemon-height">Height</h3>
+
                             </td>
                             <td>
                                 <h3 class="pokemon-weight">Weight</h3>
@@ -167,16 +195,8 @@ const johtoRegion = () => {
 
 }
 
-const pokeData = data.pokemon;
-const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
-console.log(poketype);
 
-/*
-const pokeData = data.pokemon;
-const poketype = pokeData.filter(pokeData => pokeData.type.includes ("poison"));
-console.log(poketype);
 
-const pokebug = pokeData.filter(pokeData => pokeData.type.includes ("bug"));
 document.querySelector(".poke-button").addEventListener("click", firstButton);
 document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
 document.querySelector(".johto-link").addEventListener("click", johtoRegion);
@@ -257,7 +277,5 @@ const pokewater = pokeData.filter(pokeData => pokeData.type.includes ("water"));
 console.log(pokewater);
 */
 
-document.querySelector(".poke-button").addEventListener("click", firstButton);
-document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
-document.querySelector(".johto-link").addEventListener("click", johtoRegion);
 
+//.addEventListener("click", pokeCard);

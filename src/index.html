@@ -69,7 +69,7 @@
             <textarea name="search" class="search" placeholder="Enter name o Pokemon number"></textarea> 
             <button class="go-button" type="text">Go</button>
         </div>
-        <div class="search-botton">
+        <div class="search-button">
             <select name="types" class="types">
                 <option selected value="0">TYPE</option>
                 <option value ="bug">Bug</option>
@@ -89,11 +89,11 @@
                 <option value ="rock">Rock</option>
                 <option value ="water">Water</option>
             </select>
-            <select name="a-z" class="a-z">
-                <option selected value="0">A-Z</option>
+            <select name="a-z" class="aOrder" id="aOrder">
+                <option selected value="AZ">A-Z</option>
             </select>
-            <select name="z-a" class="z-a"> 
-                <option selected value="0">Z-A</option>
+            <select name="z-a" class="zOrder" id="zOrder"> 
+                <option selected value="ZA">Z-A</option>
             </select>
          </div>  
         </div> 
@@ -118,8 +118,47 @@
             <div class="region-one">
                 <h1 class="kanto-region">Kanto Region</h1>
             </div>
+            <div class="orderButtons">
+                <button class="fromA" type="text">Sort from A to Z</button>
+                <button class="fromZ" type="text">Sort from Z to A</button>
+            </div>
+            <div class="orderTypes">
+                <button class="bug" type="button">
+                    <img src="images/bug.png"></button>
+                <button class="dragon">
+                    <img src="images/dragon.png"></button>
+                <button class="fairy">
+                    <img src="images/fairy.png"></button>
+                <button class="fire">
+                    <img src="images/fire.png"></button>
+                <button class="ghost">
+                    <img src="images/ghost.png"></button>
+                <button class="ground">
+                    <img src="images/ground.png"></button>
+                <button class="normal">
+                    <img src="images/normal.png"></button>
+                <button class="dark">
+                    <img src="images/dark.png"></button>
+                <button class="electric">
+                    <img src="images/electric.png"></button>
+                <button class="fighting">
+                    <img src="images/fighting.png"></button>
+                <button class="flying">
+                    <img src="images/flying.png"></button>
+                <button class="grass">
+                    <img src="images/grass.png"></button>
+                <button class="ice">
+                    <img src="images/ice.png"></button>
+                <button class="poison">
+                    <img src="images/poison.png"></button>
+                <button class="rock" >
+                    <img src="images/rock.png"></button>
+                <button class="water">
+                    <img src="images/water.png"></button>
+            </div>
             <div class="kanto-container" id="kanto-container">
                 <ul class="kanto-results"></ul>
+                 
             </div>
         </div>
     </div>
