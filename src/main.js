@@ -6,28 +6,10 @@ import data from './data/pokemon/pokemon.js';
 
 
 const firstButton = () => {
-    document.querySelector('.first-page').style.display = "none";
-    document.querySelector('.second-page').style.display = "block";
+    document.querySelector(".first-page").style.display = "none";
+    document.querySelector(".second-page").style.display = "block";
 }
 
-const menu = () => {
-    document.querySelector('.first-page').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
-
-const regions = () => {
-    document.querySelector('.second-page').style.display = "none";
-}
-
-const menuKanto = () => {
-    document.querySelector('.kanto-location').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
-
-const menuJohto = () => {
-    document.querySelector('.johto-location').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
 
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
@@ -44,8 +26,8 @@ const kantoRegion = () => {
         `
     })
 
-    document.querySelector('.second-page').style.display = "none";
-    document.querySelector('.kanto-location').style.display = "block";
+    document.querySelector(".second-page").style.display = "none";
+    document.querySelector(".kanto-location").style.display = "block";
     document.querySelectorAll(".poke-image").forEach((element) =>{
         element.addEventListener("click", (event) =>{
             const pokeCard = event.currentTarget.id; 
@@ -117,8 +99,8 @@ const johtoRegion = () => {
         `
     })
 
-    document.querySelector('.second-page').style.display = "none";
-    document.querySelector('.johto-location').style.display = "block";
+    document.querySelector(".second-page").style.display = "none";
+    document.querySelector(".johto-location").style.display = "block";
     document.querySelectorAll(".poke-image").forEach((element) =>{
         element.addEventListener("click", (event) =>{
             const pokeCardJ = event.currentTarget.id; 
@@ -169,62 +151,86 @@ const johtoRegion = () => {
 
 }
 
-const pokeData = data.pokemon;
-const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
-console.log(poketype);
+/* Funciones menú desplegable
+const menu = () => {
+    document.querySelector(".first-page").style.display = "block";
+    document.querySelector(".second-page").style.display = "none";
+}
+
+const regions = () => {
+    document.querySelector(".second-page").style.display = "none";
+}
+
+const menuKanto = () => {
+    document.querySelector(".kanto-location", ".pokek").style.display = "block";
+    document.querySelector(".second-page").style.display = "none";
+}
+
+const menuJohto = () => {
+    document.querySelector(".johto-location").style.display = "block";
+    document.querySelector(".second-page").style.display = "none";
+}
+
+document.querySelector(".home").addEventListener("click", menu);
+document.querySelector(".region").addEventListener("click", regions);
+document.querySelector(".kanto-menu").addEventListener("click", menuKanto);
+document.querySelector(".johto-menu").addEventListener("click", menuJohto);
+*/
+
 
 
 /*
 const pokeData = data.pokemon;
-const poketype = pokeData.filter(pokeData => pokeData.type == "poison");
+const poketype = pokeData.filter(pokeData => pokeData.type.includes ("poison"));
 console.log(poketype);
 
+const pokebug = pokeData.filter(pokeData => pokeData.type.includes ("bug"));
 
-const pokedragon = pokeData.filter(pokeData => pokeData.type == "dragon");
+
+const pokedragon = pokeData.filter(pokeData => pokeData.type.includes ("dragon"));
 console.log(pokedragon);
 
 
-const pokefairy = pokeData.filter(pokeData => pokeData.type == "fairy");
+const pokefairy = pokeData.filter(pokeData => pokeData.type.includes ("fairy"));
 console.log(pokefairy);
 
 
-const pokefire = pokeData.filter(pokeData => pokeData.type == "fire");
+const pokefire = pokeData.filter(pokeData => pokeData.type.includes ("fire"));
 console.log(pokefire);
 
 
-const pokeghost = pokeData.filter(pokeData => pokeData.type == "ghost");
+const pokeghost = pokeData.filter(pokeData => pokeData.type.includes ("ghost"));
 console.log(pokeghost);
 
-const pokeground = pokeData.filter(pokeData => pokeData.type == "ground");
+const pokeground = pokeData.filter(pokeData => pokeData.type.includes ("ground"));
 console.log(pokeground);
 
-const pokenormal = pokeData.filter(pokeData => pokeData.type == "normal");
+const pokenormal = pokeData.filter(pokeData => pokeData.type.includes ("normal"));
 console.log(pokenormal);
 
-const pokedark = pokeData.filter(pokeData => pokeData.type == "dark");
+const pokedark = pokeData.filter(pokeData => pokeData.type.includes ("dark"));
 console.log(pokedark);
 
-const pokelectric = pokeData.filter(pokeData => pokeData.type == "electric");
+const pokelectric = pokeData.filter(pokeData => pokeData.type.includes ("electric"));
 console.log(pokelectric);
 
-const pokefight = pokeData.filter(pokeData => pokeData.type == "fighting");
+const pokefight = pokeData.filter(pokeData => pokeData.type.includes ("fighting"));
 console.log(pokefight);
 
-const pokefly = pokeData.filter(pokeData => pokeData.type == "flying");
+const pokefly = pokeData.filter(pokeData => pokeData.type.includes ("flying"));
 console.log(pokefly);
 
-const pokegrass = pokeData.filter(pokeData => pokeData.type == "grass");
+const pokegrass = pokeData.filter(pokeData => pokeData.type.includes ("grass"));
 console.log(pokegrass);
 
-const pokeice = pokeData.filter(pokeData => pokeData.type == "ice");
+const pokeice = pokeData.filter(pokeData => pokeData.type.includes ("ice"));
 console.log(pokeice);
 
-const pokerock = pokeData.filter(pokeData => pokeData.type == "rock");
+const pokerock = pokeData.filter(pokeData => pokeData.type.includes ("rock"));
 console.log(pokerock);
 
-const pokewater = pokeData.filter(pokeData => pokeData.type == "water");
+const pokewater = pokeData.filter(pokeData => pokeData.type.includes ("water"));
 console.log(pokewater);
-
 */
 
 document.querySelector(".poke-button").addEventListener("click", firstButton);
