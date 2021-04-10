@@ -24,25 +24,6 @@ const firstButton = () => {
     document.querySelector(".second-page").style.display = "block";
 }
 
-const menu = () => {
-    document.querySelector('.first-page').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
-
-const regions = () => {
-    document.querySelector('.kanto-page').style.display = "none";
-}
-
-const menuKanto = () => {
-    document.querySelector('.kanto-location').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
-
-const menuJohto = () => {
-    document.querySelector('.johto-location').style.display = "block";
-    document.querySelector('.second-page').style.display = "none";
-}
-
 const pokeOrder = data.pokemon;
 const pokeAZ = pokeOrder.filter(pokeOrder => pokeOrder.name);
 pokeAZ.sort((a, b) => {
@@ -71,14 +52,32 @@ const kantoRegion = () => {
     })
 
     const container = document.querySelector('.orderTypes');
-    /*const poketype = pokeData.filter(pokeData => pokeData.type.includes ("dragon"));
-    console.log(poketype);*/
-    const types = ["bug", "dragon" , "fairy", "fire", "ghost", "ground", "normal", "dark", "electric", "fighting", "flying", "grass", "ice", "poison", "rock", "water"];
+    const types = ["bug", "dragon", "fire", "ghost", "ground", "normal", "electric", "fighting", "flying", "grass", "ice", "poison", "rock", "water"];
     types.map((data) => {
         container.innerHTML += `
-            <button class=${data} type="button"></button>
-            <img class="fil-button" src="images/${data}.png"></button>
+            <img id=${data} class="fil-button" src="images/${data}.png"></button>
         `
+    })
+
+    document.querySelectorAll(".fil-button").forEach( element => {
+        element.addEventListener("click", event => {
+            const type = event.currentTarget.id;
+            console.log(type)
+            const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
+            const poketype = pokemon.filter(pokeData => pokeData.type.includes(type));
+            console.log(poketype);
+            const containerType = document.querySelector(".kanto-results");
+            poketype.map(data => {
+                containerType.innerHTML += `
+                <li class="poke-image" id=${data.name}>
+                    <figure>
+                        <img class="pokemon-image" src=${data.img}>
+                        <div class="pokemon-name">${data.name}</div>
+                     </figure>
+                </li>
+                `
+            })
+        })
     })
 
     document.querySelector(".second-page").style.display = "none";
@@ -214,37 +213,8 @@ const johtoRegion = () => {
 document.querySelector(".poke-button").addEventListener("click", firstButton);
 document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
 document.querySelector(".johto-link").addEventListener("click", johtoRegion);
-document.querySelector(".home").addEventListener("click", menu);
-document.querySelector(".region").addEventListener("click", regions);
-document.querySelector(".kanto-menu").addEventListener("click", menuKanto);
-document.querySelector(".johto-menu").addEventListener("click", menuJohto);
 
-
-
-
-
-/*const pokeCard = () = {
-    const about = data.pokemon.filter (data => data.about);
-    const height = data.pokemon.filter (data => data.size.height);
-    const weight = data.pokemon.filter (data => data.size.weight); 
-    const type = data.pokemon.filter (data => data.type);
-    const evolution = data.pokemon.filter (data => data.evolution.name);
-
-const card = document.querySelector(".values");
-    const pokeInfoK = pokeCard.map((data) => {
-        values.InnerHTML += `
-        <div class="values">
-          <tr>
-            <td class="height">${data.size.height}</td>
-            <td class="weight">${data.size.weight}</td>
-             <td class="type-icon">${data.type}</td>
-          </tr>   
-        </div>    
-    `
-    })
-
-
-
+/*
 const pokedragon = pokeData.filter(pokeData => pokeData.type.includes ("dragon"));
 console.log(pokedragon);
 
@@ -291,5 +261,3 @@ const pokewater = pokeData.filter(pokeData => pokeData.type.includes ("water"));
 console.log(pokewater);
 */
 
-
-//.addEventListener("click", pokeCard);
