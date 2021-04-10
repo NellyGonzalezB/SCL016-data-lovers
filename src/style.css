@@ -197,6 +197,18 @@ p {
     margin: 20px;
 }
 
+.fromA:hover {
+  cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
+  transform:scale(1.2);
+  transition: transform .3s ease;
+}
+
+.fromZ:hover {
+  cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
+  transform:scale(1.2);
+  transition: transform .3s ease;
+}
+
 .orderButtons{
     text-align: center;
     display: flex;
@@ -213,6 +225,12 @@ p {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
+}
+
+.fil-button:hover {
+  cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
+  transform:scale(1.2);
+  transition: transform .3s ease;
 }
 
 .go-button{
@@ -253,6 +271,7 @@ ul {
 li:hover {
     transform:scale(1.2);
     cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
+    transition: transform .3s ease;
 }
 
 .pokemon-image {

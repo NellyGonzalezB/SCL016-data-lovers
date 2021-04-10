@@ -30,7 +30,7 @@ const menu = () => {
 }
 
 const regions = () => {
-    document.querySelector('.second-page').style.display = "none";
+    document.querySelector('.kanto-page').style.display = "none";
 }
 
 const menuKanto = () => {
@@ -55,7 +55,6 @@ pokeAZ.sort((a, b) => {
 })
 console.log(pokeAZ);
 
-
 const kantoRegion = () => {
     const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
         console.log(pokemon);
@@ -71,6 +70,17 @@ const kantoRegion = () => {
         `
     })
 
+    const container = document.querySelector('.orderTypes');
+    /*const poketype = pokeData.filter(pokeData => pokeData.type.includes ("dragon"));
+    console.log(poketype);*/
+    const types = ["bug", "dragon" , "fairy", "fire", "ghost", "ground", "normal", "dark", "electric", "fighting", "flying", "grass", "ice", "poison", "rock", "water"];
+    types.map((data) => {
+        container.innerHTML += `
+            <button class=${data} type="button"></button>
+            <img class="fil-button" src="images/${data}.png"></button>
+        `
+    })
+
     document.querySelector(".second-page").style.display = "none";
     document.querySelector(".kanto-location").style.display = "block";
     document.querySelectorAll(".poke-image").forEach((element) =>{
@@ -81,18 +91,21 @@ const kantoRegion = () => {
             console.log(pokeInfo);
             const kCard = document.querySelector(".page-container");
             pokeInfo.map((data) => {
+                const {num, img, name, about, type} = data;
+                const {height, weight} = data.size;
+                const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
                 kCard.innerHTML += `
                 <div class="card-container">
                 <div class="img-container">
-                    <h1 class="poke-number">N°${data.num}</h1>
+                    <h1 class="poke-number">N°${num}</h1>
                     <div class="circle" id="circle">
-                        <img class="card-image" src=${data.img} alt="">
+                        <img class="card-image" src=${img} alt="">
                     </div>
                 </div>
                 <div class="info-container">
                     <div class="poke-description">
-                        <h1 class="card-name">${data.name}</h1>
-                        <p class="about">${data.about}</p>
+                        <h1 class="card-name">${pokemonName}</h1>
+                        <p class="about">${about}</p>
                     </div>
                     <table>
                         <tr>
@@ -107,9 +120,9 @@ const kantoRegion = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td class="height">${data.size.height}</td>
-                            <td class="weight">${data.size.weight}</td>
-                            <td class="type-icon">${data.type}</td>
+                            <td class="height">${height}</td>
+                            <td class="weight">${weight}</td>
+                            <td class="type-icon">${type}</td>
                           
                         </tr>
                     </table>
@@ -152,18 +165,21 @@ const johtoRegion = () => {
             console.log(pokeInfoJ);
             const jCard = document.querySelector(".page-container");
             pokeInfoJ.map((data) => {
+                const {num, img, name, about, type} = data;
+                const {height, weight} = data.size;
+                const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
                 jCard.innerHTML += `
                 <div class="card-container">
                 <div class="img-container">
-                    <h1 class="poke-number">N°${data.num}</h1>
+                    <h1 class="poke-number">N°${num}</h1>
                     <div class="circle" id="circle">
-                        <img class="card-image" src=${data.img} alt="">
+                        <img class="card-image" src=${img} alt="">
                     </div>
                 </div>
                 <div class="info-container">
                     <div class="poke-description">
-                        <h1 class="card-name">${data.name}</h1>
-                        <p class="about">${data.about}</p>
+                        <h1 class="card-name">${pokemonName}</h1>
+                        <p class="about">${about}</p>
                     </div>
                     <table>
                         <tr>
@@ -179,9 +195,9 @@ const johtoRegion = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td class="height">${data.size.height}</td>
-                            <td class="weight">${data.size.weight}</td>
-                            <td class="type-icon">${data.type}</td>
+                            <td class="height">${height}</td>
+                            <td class="weight">${weight}</td>
+                            <td class="type-icon">${type}</td>
                         </tr>
                     </table>
                 </div>
@@ -194,8 +210,6 @@ const johtoRegion = () => {
     })
 
 }
-
-
 
 document.querySelector(".poke-button").addEventListener("click", firstButton);
 document.querySelector(".kanto-link").addEventListener("click", kantoRegion);
