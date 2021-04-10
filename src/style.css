@@ -183,7 +183,7 @@ p {
     font-weight: bold;
 }
 
-.fromA, .fromZ{
+.sort {
     background-color: #FFCB05;
     width: 340px;
     height: 60px;
@@ -197,13 +197,7 @@ p {
     margin: 20px;
 }
 
-.fromA:hover {
-  cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
-  transform:scale(1.2);
-  transition: transform .3s ease;
-}
-
-.fromZ:hover {
+.sort:hover {
   cursor: url(https://cdn.custom-cursor.com/db/249/32/arrow2282.png) , pointer! important;
   transform:scale(1.2);
   transition: transform .3s ease;

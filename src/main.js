@@ -4,85 +4,14 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 //import card from './card.js';
 
-
-
-
-/*const pokeOrder = data.pokemon;
-const pokeAZ = pokeOrder.filter(pokeOrder => pokeOrder.name);
-pokeAZ.sort((a, b) => {
-    if (a.name<b.name) {
-        return -1;
-        }
-    if (a.name>b.name) {
-//       return 1;
-//    }
-})
-console.log(pokeAZ);
-*/
 const firstButton = () => {
     document.querySelector(".first-page").style.display = "none";
     document.querySelector(".second-page").style.display = "block";
 }
 
-const pokeOrder = data.pokemon;
-const pokeAZ = pokeOrder.filter(pokeOrder => pokeOrder.name);
-pokeAZ.sort((a, b) => {
-    if (a.name<b.name) {
-        return -1;
-        }
-  
-//const order = document.querySelector(".aOrder");
-     //   order.innerHTML += ("aOrder");
-})
-console.log(pokeAZ);
-
 const kantoRegion = () => {
-    const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
-        console.log(pokemon);
-    const containerK = document.querySelector(".kanto-results");
-    pokemon.map((data) => {
-        containerK.innerHTML += `
-        <li class="poke-image" id=${data.name}>
-            <figure>
-                <img class="pokemon-image" src=${data.img}>
-                <div class="pokemon-name">${data.name}</div>
-             </figure>
-        </li>
-        `
-    })
-
-    const container = document.querySelector('.orderTypes');
-    const types = ["bug", "dragon", "fire", "ghost", "ground", "normal", "electric", "fighting", "flying", "grass", "ice", "poison", "rock", "water"];
-    types.map((data) => {
-        container.innerHTML += `
-            <img id=${data} class="fil-button" src="images/${data}.png"></button>
-        `
-    })
-
-    document.querySelectorAll(".fil-button").forEach( element => {
-        element.addEventListener("click", event => {
-            const type = event.currentTarget.id;
-            console.log(type)
-            const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
-            const poketype = pokemon.filter(pokeData => pokeData.type.includes(type));
-            console.log(poketype);
-            const containerType = document.querySelector(".kanto-results");
-            poketype.map(data => {
-                containerType.innerHTML += `
-                <li class="poke-image" id=${data.name}>
-                    <figure>
-                        <img class="pokemon-image" src=${data.img}>
-                        <div class="pokemon-name">${data.name}</div>
-                     </figure>
-                </li>
-                `
-            })
-        })
-    })
-
-    document.querySelector(".second-page").style.display = "none";
-    document.querySelector(".kanto-location").style.display = "block";
-    document.querySelectorAll(".poke-image").forEach((element) =>{
+    const card = () => {
+        document.querySelectorAll(".poke-image").forEach((element) =>{
         element.addEventListener("click", (event) =>{
             const pokeCard = event.currentTarget.id; 
             console.log(pokeCard);
@@ -133,9 +62,73 @@ const kantoRegion = () => {
             document.querySelector(".kanto-location").style.display = "none";
             document.querySelector(".information-card").style.display = "block";
         })
-           
+        
     })
- 
+    }
+    const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
+        console.log(pokemon);
+    const containerK = document.querySelector(".kanto-results");
+    pokemon.map((data) => {
+        containerK.innerHTML += `
+        <li class="poke-image" id=${data.name}>
+            <figure>
+                <img class="pokemon-image" src=${data.img}>
+                <div class="pokemon-name">${data.name}</div>
+             </figure>
+        </li>
+        `
+    })
+    card();
+
+    document.querySelectorAll(".sort").forEach( element => {
+        element.addEventListener("click", event => {
+            const pokeSort = event.currentTarget.value;
+            let filterA;
+            if (pokeSort == 1) { 
+                filterA = data.pokemon.filter(data => data.name.sort());
+                console.log(filterA);
+
+            } else {
+                console.log("ordenado de z-a");
+            }
+
+        })
+    })
+
+    const container = document.querySelector('.orderTypes');
+    const types = ["bug", "dragon", "fire", "ghost", "ground", "normal", "electric", "fighting", "flying", "grass", "ice", "poison", "rock", "water"];
+    types.map((data) => {
+        container.innerHTML += `
+            <img id=${data} class="fil-button" src="images/${data}.png"></button>
+        `
+    })
+
+    document.querySelectorAll(".fil-button").forEach( element => {
+        element.addEventListener("click", event => {
+            const type = event.currentTarget.id;
+            console.log(type)
+            const pokemon = data.pokemon.filter(data => data.generation.name == "kanto");
+            const poketype = pokemon.filter(pokeData => pokeData.type.includes(type));
+            console.log(poketype);
+            const containerType = document.querySelector(".kanto-results");
+            containerType.innerHTML = '';
+            poketype.map(data => {
+                containerType.innerHTML += `
+                <li class="poke-image" id=${data.name}>
+                    <figure>
+                        <img class="pokemon-image" src=${data.img}>
+                        <div class="pokemon-name">${data.name}</div>
+                     </figure>
+                </li>
+                `
+            })
+            card();
+        })
+    })
+
+    document.querySelector(".second-page").style.display = "none";
+    document.querySelector(".kanto-location").style.display = "block";
+    
 }
 
 const johtoRegion = () => {
