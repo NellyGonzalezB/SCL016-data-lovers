@@ -210,7 +210,7 @@ p {
     margin: 40px;
 }
 
-.orderTypes{
+.orderTypes, .order-types{
   text-align: center;
 }
 
